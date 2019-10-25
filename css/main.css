@@ -48,7 +48,7 @@ main {
   border-radius: var(--image-border-radius);
 }
 
-.image-wrapper::after {
+.image-gradient {
   content: '';
   position: absolute;
   top: 0;
@@ -107,16 +107,17 @@ main {
   cursor: pointer;
 }
 
-.content__btn:hover {
-  transform: scale(1.02);
+.content__btn:hover .btn__inner {
+  transform: scale(1.05);
   transition: transform 0.5s;
 }
 
-.content__btn__icon {
+.btn__icon {
   width: 14px;
   height: 16px;
   margin-left: 12px;
 }
+
 
 @media (max-width: 720px) {
   :root {
