@@ -32,7 +32,8 @@ main {
 
 .card {
   display: flex;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   height: 400px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.07);
   border-radius: 8px;
@@ -40,8 +41,9 @@ main {
 }
 
 
-.image-wrapper {
+.image-container {
   position: relative;
+  display: flex;
   flex-basis: 240px;
   flex-grow: 1;
   flex-shrink: 0;
@@ -61,26 +63,27 @@ main {
 
 .image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: var(--image-border-radius);
 }
 
 
-.content-wrapper {
+.content {
   margin: 27px 54px 27px 32px;
   display: flex;
   flex-direction: column;
 }
 
-.content__header {
+.content__description__title {
   opacity: 0.9;
   color: #000000;
   font-weight: 400;
   margin: 16px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.content__text {
+.content__description__text {
   opacity: 0.85;
   color: #000000;
   font-size: 16px;
@@ -91,28 +94,37 @@ main {
 }
 
 .content__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 167px;
   height: 48px;
   margin-top: 18px;
+  padding: 14px;
   border: none;
   border-radius: 24px;
   background-image: linear-gradient(to left, #006efe 0%, #494aff 100%);
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.9px;
   cursor: pointer;
 }
 
-.content__btn:hover .btn__inner {
+.content__btn__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.content__btn:hover .content__btn__inner {
   transform: scale(1.05);
   transition: transform 0.5s;
 }
 
-.btn__icon {
+.content__btn__text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  -moz-transform: translateY(-0.1em);
+}
+
+.content__btn__icon {
   width: 14px;
   height: 16px;
   margin-left: 12px;
@@ -120,13 +132,21 @@ main {
 
 
 @media (max-width: 720px) {
+  .card {
+    height: auto;
+  }
+
+  .content-wrapper {
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 548px) {
   :root {
     --image-border-radius: 8px 8px 0 0;
   }
 
   .card {
     flex-direction: column;
-    width: 100%;
-    height: auto;
   }
 }
