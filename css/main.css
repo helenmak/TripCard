@@ -103,6 +103,7 @@ main {
   border-radius: 24px;
 }
 
+
 @media (max-width: 720px) {
   .card {
     height: auto;
@@ -112,6 +113,7 @@ main {
     margin-right: 32px;
   }
 }
+
 
 @media (max-width: 548px) {
   :root {

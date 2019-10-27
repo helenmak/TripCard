@@ -3,22 +3,19 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-size: 200% auto;
+  transition: transform 0.5s, background-position 0.5s;
 }
 
 .btn--blue {
-  background-image: linear-gradient(to left, #006efe 0%, #494aff 100%);
+  background-image: linear-gradient(to left, #006efe 0%, #006efe 50%, #494aff 100%);
 }
 
-.btn__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s;
-}
-
-.btn:hover .btn__inner {
-  transform: scale(1.05);
-  transition: transform 0.5s;
+.btn:hover,
+.btn:focus {
+  background-position: 70%;
+  transform: scale(1.02);
+  transition: transform 0.5s, background-position 0.5s;
 }
 
 .btn__text {
