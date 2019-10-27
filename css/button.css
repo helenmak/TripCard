@@ -1,0 +1,36 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn--blue {
+  background-image: linear-gradient(to left, #006efe 0%, #494aff 100%);
+}
+
+.btn__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.btn:hover .btn__inner {
+  transform: scale(1.05);
+  transition: transform 0.5s;
+}
+
+.btn__text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  -moz-transform: translateY(-0.1em);
+}
+
+.btn__icon {
+  width: 14px;
+  height: 16px;
+  margin-left: 12px;
+}

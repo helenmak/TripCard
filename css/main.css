@@ -1,3 +1,5 @@
+@import 'button.css';
+
 /* common */
 html, body, div, main {
   box-sizing: border-box;
@@ -41,7 +43,7 @@ main {
 }
 
 
-.image-container {
+.photo {
   position: relative;
   display: flex;
   flex-basis: 240px;
@@ -50,7 +52,7 @@ main {
   border-radius: var(--image-border-radius);
 }
 
-.image-gradient {
+.photo__gradient {
   content: '';
   position: absolute;
   top: 0;
@@ -61,7 +63,7 @@ main {
   width: 100%;
 }
 
-.image {
+.photo__image {
   width: 100%;
   object-fit: cover;
   border-radius: var(--image-border-radius);
@@ -74,7 +76,7 @@ main {
   flex-direction: column;
 }
 
-.content__description__title {
+.content__title {
   opacity: 0.9;
   color: #000000;
   font-weight: 400;
@@ -83,7 +85,7 @@ main {
   text-overflow: ellipsis;
 }
 
-.content__description__text {
+.content__text {
   opacity: 0.85;
   color: #000000;
   font-size: 16px;
@@ -97,39 +99,9 @@ main {
   width: 167px;
   height: 48px;
   margin-top: 18px;
-  padding: 14px;
   border: none;
   border-radius: 24px;
-  background-image: linear-gradient(to left, #006efe 0%, #494aff 100%);
-  cursor: pointer;
 }
-
-.content__btn__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.5s;
-}
-
-.content__btn:hover .content__btn__inner {
-  transform: scale(1.05);
-  transition: transform 0.5s;
-}
-
-.content__btn__text {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.9px;
-  -moz-transform: translateY(-0.1em);
-}
-
-.content__btn__icon {
-  width: 14px;
-  height: 16px;
-  margin-left: 12px;
-}
-
 
 @media (max-width: 720px) {
   .card {
